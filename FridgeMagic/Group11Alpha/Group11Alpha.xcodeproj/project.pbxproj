@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7443368C207D711600B8199F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443368B207D711600B8199F /* File.swift */; };
 		7EEC703B207C859500DA4EA4 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC703A207C859500DA4EA4 /* registerViewController.swift */; };
 		7EEC707B207C957100DA4EA4 /* Group11Alpha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC7079207C957100DA4EA4 /* Group11Alpha.xcdatamodeld */; };
 		813B85F6207C7C6E00FB8947 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813B85F5207C7C6E00FB8947 /* Config.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7443368B207D711600B8199F /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		7EEC703A207C859500DA4EA4 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		7EEC707A207C957100DA4EA4 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		813B85F5207C7C6E00FB8947 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -79,23 +81,24 @@
 			isa = PBXGroup;
 			children = (
 				EFCD78182062F1DD00903A5F /* AppDelegate.swift */,
-				EFCD781A2062F1DD00903A5F /* ViewController.swift */,
 				EFCD781C2062F1DD00903A5F /* Main.storyboard */,
-				7EEC7079207C957100DA4EA4 /* Group11Alpha.xcdatamodeld */,
+				EFCD78212062F1DD00903A5F /* LaunchScreen.storyboard */,
+				EFCD782A2062F80C00903A5F /* LoginViewController.swift */,
 				7EEC703A207C859500DA4EA4 /* registerViewController.swift */,
+				813B85F8207D5CF400FB8947 /* TapViewController.swift */,
 				813B85FC207D5CF400FB8947 /* FifthViewController.swift */,
 				813B85FB207D5CF400FB8947 /* FirstViewController.swift */,
 				813B85FA207D5CF400FB8947 /* FourthViewController.swift */,
 				813B85F9207D5CF400FB8947 /* LikedRecipeViewController.swift */,
 				813B85F7207D5CF400FB8947 /* MyRecipeViewController.swift */,
 				813B85FD207D5CF400FB8947 /* SecondViewController.swift */,
-				813B85F8207D5CF400FB8947 /* TapViewController.swift */,
 				813B85FE207D5CF400FB8947 /* ThirdViewController.swift */,
-				813B85F5207C7C6E00FB8947 /* Config.swift */,
+				EFCD781A2062F1DD00903A5F /* ViewController.swift */,
 				EFCD781F2062F1DD00903A5F /* Assets.xcassets */,
-				EFCD78212062F1DD00903A5F /* LaunchScreen.storyboard */,
+				7EEC7079207C957100DA4EA4 /* Group11Alpha.xcdatamodeld */,
 				EFCD78242062F1DD00903A5F /* Info.plist */,
-				EFCD782A2062F80C00903A5F /* LoginViewController.swift */,
+				813B85F5207C7C6E00FB8947 /* Config.swift */,
+				7443368B207D711600B8199F /* File.swift */,
 			);
 			path = Group11Alpha;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				7EEC703B207C859500DA4EA4 /* registerViewController.swift in Sources */,
 				EFCD78192062F1DD00903A5F /* AppDelegate.swift in Sources */,
 				813B85FF207D5CF400FB8947 /* MyRecipeViewController.swift in Sources */,
+				7443368C207D711600B8199F /* File.swift in Sources */,
 				813B8606207D5CF400FB8947 /* ThirdViewController.swift in Sources */,
 				813B8600207D5CF400FB8947 /* TapViewController.swift in Sources */,
 				7EEC707B207C957100DA4EA4 /* Group11Alpha.xcdatamodeld in Sources */,
@@ -324,6 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Group11Alpha/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cs329e.Group11Alpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,6 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Group11Alpha/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cs329e.Group11Alpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";

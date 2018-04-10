@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bre-fB-kUE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bre-fB-kUE">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -438,11 +438,12 @@
                         <outlet property="repeatPasswordTextField" destination="7xV-wP-Jqo" id="eWI-WQ-yMm"/>
                         <outlet property="userEmailTextField" destination="72m-Rh-UXl" id="gRO-wL-Tao"/>
                         <outlet property="userPasswordTextField" destination="j8d-x2-dP6" id="x8Y-le-Anp"/>
+                        <segue destination="JH7-0B-xQc" kind="show" identifier="RegisterToLogin" id="LZE-Ql-v4U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhM-6j-Iz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1424.6376811594205" y="-642.39130434782612"/>
+            <point key="canvasLocation" x="1477" y="-1176"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dNu-lR-Zpg">
@@ -494,4 +495,8 @@
         <image name="personal" width="128" height="128"/>
         <image name="search" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="47T-jc-ugd"/>
+        <segue reference="LZE-Ql-v4U"/>
+    </inferredMetricsTieBreakers>
 </document>

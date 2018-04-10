@@ -43,7 +43,8 @@ class registerViewController: UIViewController {
         Config.setUserId(userEmailTextField.text!)
         Config.setPassword(userPasswordTextField.text!)
         
-        // Display alert message with confirmation
+        // Display alert message with confirmation and send back to login page
+        self.performSegue(withIdentifier: "RegisterToLogin", sender: self)
         displayMyAlertMessage(userMessage: "Registration is successful. Thank you!")
     }
     
