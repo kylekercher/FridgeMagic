@@ -10,21 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBAction func loginBtn(_ sender: Any) {
-    }
-    
-    @IBAction func facebookBtn(_ sender: Any) {
-    }
-    
-    @IBAction func googleBtn(_ sender: Any) {
-    }
-    
-    
-    @IBAction func forgotBtn(_ sender: Any) {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +24,57 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        let userEmail = usernameTextField.text
+        let userPassword = passwordTextField.text
+        let userEmailStored = Config.userId()
+        let userPasswordStore = Config.password()
+        
+        if userEmailStored == userEmail {
+            if userPasswordStore == userPassword {
+                // Login is successfull
+                displayMyAlertMessage(userMessage: "Logged In")
+                
+            }
+            else{
+                displayMyAlertMessage(userMessage: "Password does not match")
+            }
+        }
+        else{
+            displayMyAlertMessage(userMessage: "Username does not exist")
+        }
+        
     }
-    */
+    
+    func displayMyAlertMessage(userMessage:String){
+        let myAlert = UIAlertController (title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction (title: "OK", style: UIAlertActionStyle.default, handler:nil)
+        
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated:true, completion: nil)
+    }
+    
+    // Control the Keyboards Operations
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+
+
+    
 
 }
