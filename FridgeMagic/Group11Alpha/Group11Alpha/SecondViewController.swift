@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var search: UITextField!
     @IBOutlet weak var Whatsinmyfridge: UILabel!
+    @IBOutlet weak var FoodNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

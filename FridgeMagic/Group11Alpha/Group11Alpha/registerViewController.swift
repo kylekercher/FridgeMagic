@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class registerViewController: UIViewController {
     
@@ -16,10 +17,41 @@ class registerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
+    var Accounts = [NSManagedObject]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        //
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Account")
+        
+        //
+        var fetchedResults:[NSManagedObject]? = nil
+        
+        do {
+            try fetchedResults = managedContext.fetch(fetchRequest) as? [NSManagedObject]
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        if let results = fetchedResults {
+            Accounts = results
+            print(Accounts)
+        } else {
+            print("Could not fetch")
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -42,6 +74,7 @@ class registerViewController: UIViewController {
         //Store Data
         Config.setUserId(userEmailTextField.text!)
         Config.setPassword(userPasswordTextField.text!)
+        saveAccountCoreData(username: userEmailTextField.text!, password: userPasswordTextField.text!)
         
         // Display alert message with confirmation and send back to login page
         self.performSegue(withIdentifier: "RegisterToLogin", sender: self)
@@ -86,5 +119,44 @@ class registerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func saveAccountCoreData(username: String, password:String) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        // Create the entity we want to save
+        let accountEntity =  NSEntityDescription.entity(forEntityName: "Account", in: managedContext)
+        
+        let account = NSManagedObject(entity: accountEntity!, insertInto:managedContext)
+        
+        // Set the attribute values
+        account.setValue(username, forKey: "username")
+        account.setValue(password, forKey: "password")
+        
+        // Commit the changes.
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        //make the pantry and recipe book
+        let pantryEntity =  NSEntityDescription.entity(forEntityName: "Pantry", in: managedContext)
+        let recipeBookEntity =  NSEntityDescription.entity(forEntityName: "RecipeBook", in: managedContext)
+        
+        let pantry = NSManagedObject(entity: pantryEntity!, insertInto:managedContext)
+        let recipeBook = NSManagedObject(entity: recipeBookEntity!, insertInto:managedContext)
+        
+        //set the pantry to the person and keep it empty
+        account.setValue(pantry, forKey: "pantry")
+        account.setValue(recipeBook, forKey: "recipeBook")
+        
+        // Add the new entity to our array of managed objects
+        Accounts.append(account)
+    }
 
 }

@@ -43,6 +43,21 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wb-Aa-0Iv">
+                                <rect key="frame" x="286" y="144" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Item"/>
+                                <connections>
+                                    <segue destination="Ds8-9v-smL" kind="show" id="bzz-Jz-ltx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKa-E1-nDf">
+                                <rect key="frame" x="186" y="198" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="S6H-Ay-fIN"/>
@@ -51,6 +66,7 @@
                         <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-8"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="FoodNameLabel" destination="OKa-E1-nDf" id="0O8-G8-8CR"/>
                         <outlet property="Whatsinmyfridge" destination="CCa-wW-6FI" id="QIW-k5-jtw"/>
                         <outlet property="search" destination="oOR-sR-oWb" id="aGJ-lI-yQI"/>
                     </connections>
@@ -59,6 +75,61 @@
                 <exit id="Eny-Ll-Iu2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2589.5999999999999" y="803.74812593703155"/>
+        </scene>
+        <!--Add Item View Controller-->
+        <scene sceneID="yBD-bo-WSS">
+            <objects>
+                <viewController id="Ds8-9v-smL" customClass="addItemViewController" customModule="Group11Alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iOV-lL-2sB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGh-7e-RKg">
+                                <rect key="frame" x="152" y="134" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="itemNameTextField:" destination="VJD-5R-pn5" eventType="editingDidEnd" id="Ich-qB-l8d"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YsB-Nm-xW1">
+                                <rect key="frame" x="152" y="212" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wi-AG-ceD">
+                                <rect key="frame" x="152" y="280" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unr-lG-q7y">
+                                <rect key="frame" x="191" y="353" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="saveItemButton:" destination="Ds8-9v-smL" eventType="touchUpInside" id="r7J-4z-yvn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="xB3-nD-Vpk"/>
+                    </view>
+                    <connections>
+                        <outlet property="expirationDateTextField" destination="YsB-Nm-xW1" id="EhC-NC-oJb"/>
+                        <outlet property="nameTextField" destination="DGh-7e-RKg" id="fTA-PT-ECs"/>
+                        <outlet property="quantityTextField" destination="5Wi-AG-ceD" id="euf-z7-vn7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBZ-Le-Xdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VJD-5R-pn5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3352" y="803"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="eQ9-wc-4HG">
@@ -496,7 +567,6 @@
         <image name="search" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="47T-jc-ugd"/>
         <segue reference="LZE-Ql-v4U"/>
     </inferredMetricsTieBreakers>
 </document>

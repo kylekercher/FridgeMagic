@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7443368C207D711600B8199F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443368B207D711600B8199F /* File.swift */; };
+		74BC975E208FDD1700861156 /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BC975D208FDD1700861156 /* addItemViewController.swift */; };
+		74BC9760208FE71200861156 /* PantryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BC975F208FE71200861156 /* PantryTableViewController.swift */; };
 		7EEC703B207C859500DA4EA4 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC703A207C859500DA4EA4 /* registerViewController.swift */; };
 		7EEC707B207C957100DA4EA4 /* Group11Alpha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC7079207C957100DA4EA4 /* Group11Alpha.xcdatamodeld */; };
 		813B85F6207C7C6E00FB8947 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813B85F5207C7C6E00FB8947 /* Config.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		7443368B207D711600B8199F /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		74BC975D208FDD1700861156 /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
+		74BC975F208FE71200861156 /* PantryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryTableViewController.swift; sourceTree = "<group>"; };
 		7EEC703A207C859500DA4EA4 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		7EEC707A207C957100DA4EA4 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		813B85F5207C7C6E00FB8947 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				EFCD78182062F1DD00903A5F /* AppDelegate.swift */,
 				EFCD781C2062F1DD00903A5F /* Main.storyboard */,
 				EFCD78212062F1DD00903A5F /* LaunchScreen.storyboard */,
+				74BC975D208FDD1700861156 /* addItemViewController.swift */,
+				74BC975F208FE71200861156 /* PantryTableViewController.swift */,
 				EFCD782A2062F80C00903A5F /* LoginViewController.swift */,
 				7EEC703A207C859500DA4EA4 /* registerViewController.swift */,
 				813B85F8207D5CF400FB8947 /* TapViewController.swift */,
@@ -188,7 +194,9 @@
 				7443368C207D711600B8199F /* File.swift in Sources */,
 				813B8606207D5CF400FB8947 /* ThirdViewController.swift in Sources */,
 				813B8600207D5CF400FB8947 /* TapViewController.swift in Sources */,
+				74BC975E208FDD1700861156 /* addItemViewController.swift in Sources */,
 				7EEC707B207C957100DA4EA4 /* Group11Alpha.xcdatamodeld in Sources */,
+				74BC9760208FE71200861156 /* PantryTableViewController.swift in Sources */,
 				813B8603207D5CF400FB8947 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
